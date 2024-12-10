@@ -27,9 +27,9 @@ public class Jyanken_Chapter26 {
 	};
 
 	public String getRandom() {
-		String[] hands = { "r", "s", "p" };
-		int index = (int) Math.round(Math.random() * 3);
-		return hands[index];
+	    String[] hands = { "r", "s", "p" };
+	    int index = (int) Math.floor(Math.random() * 3);
+	    return hands[index];
 	}
 
 	public void playGame(String myHand, String botHand) {
