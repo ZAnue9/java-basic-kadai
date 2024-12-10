@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class Jyanken_Chapter26 {
+	@SuppressWarnings("resource")
 	public String getMyChoice() {
 		System.out.println("自分のじゃんけんの手を入力しましょう");
 		System.out.println("グーはrockのrを入力しましょう");
@@ -22,14 +23,13 @@ public class Jyanken_Chapter26 {
 				System.out.println("入力された値が正しくありません");
 			}
 		}
-		scanner.close();
 		return null;
 	};
 
 	public String getRandom() {
-	    String[] hands = { "r", "s", "p" };
-	    int index = (int) Math.floor(Math.random() * 3);
-	    return hands[index];
+		String[] hands = { "r", "s", "p" };
+		int index = (int) Math.floor(Math.random() * 3);
+		return hands[index];
 	}
 
 	public void playGame(String myHand, String botHand) {
@@ -49,5 +49,4 @@ public class Jyanken_Chapter26 {
 			System.out.println("自分の負けです");
 		}
 	}
-
 }
